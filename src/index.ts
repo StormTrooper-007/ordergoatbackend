@@ -78,7 +78,7 @@ app.use(express.urlencoded())
 app.use('/api/v1/users', userRouter)
 app.use('/api/v1/orders', orderRouter)
 
-const port = variables.PORT || 3004;
+const port = process.env.PORT || 3004;
 
 app.listen(port, () => {
   console.log(`app is runing on port ${port}`)
