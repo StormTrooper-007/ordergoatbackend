@@ -1,0 +1,68 @@
+
+POST http://localhost:3004/api/v1/users HTTP/1.1
+content-type: application/json
+
+
+{
+    "username":"c",
+    "email":"c@gmail.com",
+    "password":"c"
+}
+
+###
+
+POST http://localhost:3004/api/v1/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "username":"collins",
+    "password":"abcd"
+}
+
+###
+GET http://localhost:3004/api/v1/users/user HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3004/api/v1/users HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:3004/api/v1/orders HTTP/1.1
+content-type: application/json
+
+       {
+           "orders":
+           [
+            {
+            "name": "pasta",
+            "image":"image",
+            "price":20,
+            "section":"pasta",
+            "quantity":2,
+            "notes":"no tomaaato",
+            "table":"301",
+            "day":"tuesday",
+            "time":"Wednesday"
+            },
+            {
+            "name": "pasta",
+            "image":"image",
+            "price":20,
+            "section":"pasta",
+            "quantity":2,
+            "notes":"no tomaaato",
+            "table":"301",
+            "day":"tuesday",
+            "time":"Wednesday"
+            }
+           ]
+       }
+###
+PUT http://localhost:3004/api/v1/users/6249e6236ca386dd435eca54 HTTP/1.1
+content-type: application/json
+
+{
+    "username":"chigboo",
+    "email":"chigbo@gmail.com"
+}
