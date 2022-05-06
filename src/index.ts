@@ -18,14 +18,14 @@ import {variables} from "./config/variables";
 
 dotenv.config({path: "../.env"});
 // Mongoose
-mongoose.connect(variables.MONGO_URI, (err: Error) => {
+mongoose.connect( variables.MONGO_URI, (err: Error) => {
   if (err) throw err
   console.log('connected to mongodb')
 })
 
 //Middlewares
 const app = express()
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }))
+app.use(cors({ origin: 'https://order-goat.netlify.app', credentials: true }))
 // app.use(
 //   session({
 //     secret: `${process.env.SECRET}`,
